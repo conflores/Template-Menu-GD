@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bcnqdsellj43u"]
+[gd_scene load_steps=13 format=3 uid="uid://bcnqdsellj43u"]
 
 [ext_resource type="Script" uid="uid://b2xyhws4i6fba" path="res://MainMenu/menu_template.gd" id="1_jl2ug"]
 
@@ -12,8 +12,7 @@ shadow_offset = Vector2(2, 2)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04mby"]
 bg_color = Color(0.6, 0.102, 0.102, 1)
 skew = Vector2(-0.5, 0)
-border_width_left = 8
-border_width_top = 3
+border_width_left = 12
 border_color = Color(0.410658, 0.0562801, 0.0563991, 1)
 border_blend = true
 expand_margin_right = 55.0
@@ -21,64 +20,68 @@ expand_margin_right = 55.0
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xl12c"]
 bg_color = Color(0.17878, 0.707651, 0.413564, 1)
 skew = Vector2(-0.5, 0)
+border_width_left = 12
+border_color = Color(0.024, 0.6, 0.072, 1)
+border_blend = true
 expand_margin_right = 55.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ccxm"]
 bg_color = Color(1, 0.57, 0.14, 1)
 skew = Vector2(-0.5, 0)
-border_width_left = 8
-border_width_top = 3
+border_width_left = 12
 border_color = Color(0.8, 0.453333, 0, 1)
 border_blend = true
+
+[sub_resource type="Animation" id="Animation_1ccxm"]
+resource_name = "opcoeschegando"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OptionsButtons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-144, -73), Vector2(37, -73)]
+}
 
 [sub_resource type="Animation" id="Animation_04mby"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer/TemplateMenuGame:position")
+tracks/0/path = NodePath("OptionsButtons:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-120, -61)]
-}
-
-[sub_resource type="Animation" id="Animation_1ccxm"]
-resource_name = "nome_chegada"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/path = NodePath("VBoxContainer/TemplateMenuGame:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-120, -100), Vector2(-120, -61)]
+"values": [Vector2(37, -73)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_04mby"]
 _data = {
 &"RESET": SubResource("Animation_04mby"),
-&"nome_chegada": SubResource("Animation_1ccxm")
+&"opcoeschegando": SubResource("Animation_1ccxm")
 }
 
 [sub_resource type="Animation" id="Animation_xl12c"]
 resource_name = "entrou"
-length = 0.5
+length = 0.1
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer/QuitGame:theme_override_styles/hover:expand_margin_right")
+tracks/0/path = NodePath("OptionsButtons/QuitGame:theme_override_styles/hover:expand_margin_right")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 55.0]
@@ -86,11 +89,11 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("VBoxContainer/Options:theme_override_styles/hover:expand_margin_right")
+tracks/1/path = NodePath("OptionsButtons/Settings:theme_override_styles/hover:expand_margin_right")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 55.0]
@@ -98,11 +101,11 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("VBoxContainer/StartGame:theme_override_styles/hover:expand_margin_right")
+tracks/2/path = NodePath("OptionsButtons/StartGame:theme_override_styles/hover:expand_margin_right")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 55.0]
@@ -113,7 +116,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer/QuitGame:theme_override_styles/hover:expand_margin_right")
+tracks/0/path = NodePath("OptionsButtons/QuitGame:theme_override_styles/hover:expand_margin_right")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -125,7 +128,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("VBoxContainer/Options:theme_override_styles/hover:expand_margin_right")
+tracks/1/path = NodePath("OptionsButtons/Settings:theme_override_styles/hover:expand_margin_right")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -137,7 +140,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("VBoxContainer/StartGame:theme_override_styles/hover:expand_margin_right")
+tracks/2/path = NodePath("OptionsButtons/StartGame:theme_override_styles/hover:expand_margin_right")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -147,13 +150,55 @@ tracks/2/keys = {
 "values": [55.0]
 }
 
+[sub_resource type="Animation" id="Animation_qq56j"]
+resource_name = "saindo"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OptionsButtons/QuitGame:theme_override_styles/hover:expand_margin_right")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [55.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OptionsButtons/Settings:theme_override_styles/hover:expand_margin_right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [55.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OptionsButtons/StartGame:theme_override_styles/hover:expand_margin_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [55.0, 0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qq56j"]
 _data = {
 &"RESET": SubResource("Animation_xwh6o"),
-&"entrou": SubResource("Animation_xl12c")
+&"entrou": SubResource("Animation_xl12c"),
+&"saindo": SubResource("Animation_qq56j")
 }
 
-[node name="MenuTemplate" type="Control" node_paths=PackedStringArray("animador")]
+[node name="MenuTemplate" type="Control" node_paths=PackedStringArray("entra_sai_mouse", "animador_de_opcoes_menu")]
 layout_mode = 3
 anchors_preset = 4
 anchor_top = 0.5
@@ -161,7 +206,9 @@ anchor_bottom = 0.5
 grow_vertical = 2
 size_flags_horizontal = 0
 script = ExtResource("1_jl2ug")
-animador = NodePath("AnimadorSelecionado")
+entra_sai_mouse = NodePath("AnimadorSelecionado")
+animador_de_opcoes_menu = NodePath("AnimadorEntradaOpcoes")
+pode_interagir = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -174,20 +221,19 @@ tooltip_text = "
 "
 color = Color(0, 0, 0, 0.627451)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Title Game" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 40.0
-offset_top = -73.0
-offset_right = 287.0
-offset_bottom = 77.0
+offset_left = 34.0
+offset_top = -119.0
+offset_right = 281.0
+offset_bottom = -74.0
 grow_vertical = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 9
+alignment = 1
 
-[node name="TemplateMenuGame" type="Label" parent="VBoxContainer"]
+[node name="TemplateNameGame" type="Label" parent="Title Game"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -197,36 +243,52 @@ theme_override_font_sizes/font_size = 32
 text = "Template Name"
 label_settings = SubResource("LabelSettings_1ccxm")
 
-[node name="StartGame" type="Button" parent="VBoxContainer"]
+[node name="OptionsButtons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 37.0
+offset_top = -73.0
+offset_right = 167.0
+offset_bottom = 38.0
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 9
+
+[node name="StartGame" type="Button" parent="OptionsButtons"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
 theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
 text = "Start Game"
 alignment = 0
 
-[node name="Options" type="Button" parent="VBoxContainer"]
+[node name="Settings" type="Button" parent="OptionsButtons"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
 theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
-text = "Options"
+text = "Settings"
 alignment = 0
 
-[node name="QuitGame" type="Button" parent="VBoxContainer"]
+[node name="QuitGame" type="Button" parent="OptionsButtons"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
 theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
 text = "Quit Game"
 alignment = 0
 
-[node name="Animador" type="AnimationPlayer" parent="."]
+[node name="AnimadorEntradaOpcoes" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_04mby")
 }
@@ -236,7 +298,12 @@ libraries = {
 &"": SubResource("AnimationLibrary_qq56j")
 }
 
-[connection signal="mouse_entered" from="VBoxContainer/StartGame" to="." method="_on_start_game_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/StartGame" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuitGame" to="." method="_on_quit_game_pressed"]
+[connection signal="mouse_entered" from="OptionsButtons/StartGame" to="." method="_on_start_game_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsButtons/StartGame" to="." method="_on_start_game_mouse_exited"]
+[connection signal="pressed" from="OptionsButtons/StartGame" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="OptionsButtons/Settings" to="." method="_on_options_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsButtons/Settings" to="." method="_on_options_mouse_exited"]
+[connection signal="pressed" from="OptionsButtons/Settings" to="." method="_on_options_pressed"]
+[connection signal="mouse_entered" from="OptionsButtons/QuitGame" to="." method="_on_quit_game_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsButtons/QuitGame" to="." method="_on_quit_game_mouse_exited"]
+[connection signal="pressed" from="OptionsButtons/QuitGame" to="." method="_on_quit_game_pressed"]
