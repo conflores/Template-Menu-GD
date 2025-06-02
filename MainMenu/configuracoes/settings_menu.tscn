@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://bcnqdsellj43u"]
+[gd_scene load_steps=14 format=3 uid="uid://b3bn0h3172263"]
 
-[ext_resource type="Script" uid="uid://b2xyhws4i6fba" path="res://MainMenu/menu_template.gd" id="1_jl2ug"]
+[ext_resource type="Script" uid="uid://b3v5ypdlmmscg" path="res://MainMenu/configuracoes/settings_menu.gd" id="1_15e5k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1ccxm"]
 font_size = 32
@@ -39,6 +39,13 @@ border_width_left = 12
 border_color = Color(0.8, 0.454902, 0, 1)
 border_blend = true
 expand_margin_left = 26.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15e5k"]
+bg_color = Color(0.6, 0.101961, 0.101961, 1)
+skew = Vector2(-0.5, 0)
+border_width_left = 12
+border_color = Color(0.411765, 0.054902, 0.054902, 1)
+border_blend = true
 
 [sub_resource type="Animation" id="Animation_1ccxm"]
 resource_name = "entrada"
@@ -408,17 +415,16 @@ _data = {
 &"saindo": SubResource("Animation_6ahik")
 }
 
-[node name="MenuTemplate" type="Control" node_paths=PackedStringArray("entra_sai_mouse", "animador_de_transicao", "bt1", "bt2", "bt3", "timer")]
+[node name="SettingsMenu" type="Control" node_paths=PackedStringArray("entra_sai_mouse", "animador_de_transicao", "bt1", "bt2", "bt3", "timer")]
 layout_mode = 3
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 grow_vertical = 2
 size_flags_horizontal = 0
-script = ExtResource("1_jl2ug")
+script = ExtResource("1_15e5k")
 entra_sai_mouse = NodePath("MousePassou")
 animador_de_transicao = NodePath("SelesaoDeOpcao")
-pode_interagir = true
 bt1 = NodePath("OptionsButtons/StartGame")
 bt2 = NodePath("OptionsButtons/Settings")
 bt3 = NodePath("OptionsButtons/QuitGame")
@@ -454,7 +460,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
 theme_override_font_sizes/font_size = 32
-text = "MELLO BOY!"
+text = "SETTINGS"
 label_settings = SubResource("LabelSettings_1ccxm")
 
 [node name="OptionsButtons" type="VBoxContainer" parent="."]
@@ -482,8 +488,23 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
 disabled = true
-text = "Start Game"
+button_mask = 0
+text = "Music"
 alignment = 0
+
+[node name="CheckButton" type="CheckButton" parent="OptionsButtons/StartGame"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
+button_pressed = true
 
 [node name="Settings" type="Button" parent="OptionsButtons"]
 layout_mode = 2
@@ -494,12 +515,27 @@ theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
 theme_override_styles/disabled = SubResource("StyleBoxFlat_xwh6o")
-theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
+theme_override_styles/hover = SubResource("StyleBoxFlat_15e5k")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
 disabled = true
-text = "Settings"
+button_mask = 0
+text = "Effects"
 alignment = 0
+
+[node name="CheckButton" type="CheckButton" parent="OptionsButtons/Settings"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
+button_pressed = true
 
 [node name="QuitGame" type="Button" parent="OptionsButtons"]
 layout_mode = 2
@@ -514,7 +550,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
 disabled = true
-text = "Quit Game"
+text = "Back"
 alignment = 0
 
 [node name="SelesaoDeOpcao" type="AnimationPlayer" parent="."]
@@ -534,6 +570,7 @@ one_shot = true
 [connection signal="mouse_entered" from="OptionsButtons/StartGame" to="." method="_on_start_game_mouse_entered"]
 [connection signal="mouse_exited" from="OptionsButtons/StartGame" to="." method="_on_start_game_mouse_exited"]
 [connection signal="pressed" from="OptionsButtons/StartGame" to="." method="_on_button_pressed"]
+[connection signal="toggled" from="OptionsButtons/StartGame/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="mouse_entered" from="OptionsButtons/Settings" to="." method="_on_options_mouse_entered"]
 [connection signal="mouse_exited" from="OptionsButtons/Settings" to="." method="_on_options_mouse_exited"]
 [connection signal="pressed" from="OptionsButtons/Settings" to="." method="_on_options_pressed"]

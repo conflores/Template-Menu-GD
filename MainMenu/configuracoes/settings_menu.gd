@@ -13,10 +13,6 @@ var goto3 : bool = false #sai do jogo
 
 func _ready() -> void:
 	animador_de_transicao.play("entrada") 
-	bt1.show()
-	bt2.show()
-	bt3.show()
-	pass
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_down"):
 		animador_de_transicao.play("entrada") 
@@ -47,49 +43,62 @@ func _on_quit_game_pressed() -> void:
 
 ##ENTRADA DE MOUSE
 func _on_start_game_mouse_entered() -> void:
-	entra_sai_mouse.play("entrou")
+	#entra_sai_mouse.play("entrou")
+	pass
 func _on_options_mouse_entered() -> void:
-	entra_sai_mouse.play("entrou")
+	#entra_sai_mouse.play("entrou")
+	pass
 func _on_quit_game_mouse_entered() -> void:
 	entra_sai_mouse.play("entrou")
 
 
 ##SAINDA DE MOUSE
 func _on_quit_game_mouse_exited() -> void:
-	entra_sai_mouse.play("saindo")
+	#entra_sai_mouse.play("saindo")
+	
 	pass
 func _on_options_mouse_exited() -> void:
-	entra_sai_mouse.play("saindo")
+	#entra_sai_mouse.play("saindo")
 	pass
 func _on_start_game_mouse_exited() -> void:
 	entra_sai_mouse.play("saindo")
 	pass
 
 
-func _on_selesao_de_opcao_animation_finished(_anim_name: StringName) -> void:
-	if _anim_name == "sainda":
-		if goto1:
-			print("para o jogo")
-			
-			return
-		if goto2:
-			print("para para ali")
-			get_tree().change_scene_to_file("res://MainMenu/configuracoes/settings_menu.tscn")
-			return
-		if goto3:
-			get_tree().quit()
-			return
 
 
 func _on_timer_timeout() -> void:
 	if goto1:
 		bt2.hide()
 		bt3.hide()
-
 	if goto2:
 		bt1.hide()
 		bt3.hide()
-
 	if goto3:
 		bt2.hide()
 		bt1.hide()
+	pass 
+func _on_selesao_de_opcao_animation_finished(_anim_name: StringName) -> void:
+	if _anim_name == "sainda":
+		if goto1:
+			print("para o jogo")
+			return
+		if goto2:
+			print("para para ali")
+			return
+		if goto3:
+			get_tree().change_scene_to_file("res://MainMenu/menu_template.tscn")
+			bt1.show()
+			bt2.show()
+			bt3.show()
+			return
+
+
+
+func _on_check_button_toggled(toggled_on: bool) -> void:
+	#parando a misica
+	#criar comadno global!
+	if toggled_on == false:
+		print("cu")
+	if toggled_on:
+		print("buceta")
