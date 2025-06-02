@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bcnqdsellj43u"]
+[gd_scene load_steps=14 format=3 uid="uid://bcnqdsellj43u"]
 
 [ext_resource type="Script" uid="uid://b2xyhws4i6fba" path="res://MainMenu/menu_template.gd" id="1_jl2ug"]
 
@@ -31,10 +31,11 @@ skew = Vector2(-0.5, 0)
 border_width_left = 12
 border_color = Color(0.8, 0.453333, 0, 1)
 border_blend = true
+expand_margin_left = 26.0
 
 [sub_resource type="Animation" id="Animation_1ccxm"]
-resource_name = "opcoeschegando"
-length = 0.2
+resource_name = "entrada"
+length = 0.5
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -43,10 +44,94 @@ tracks/0/path = NodePath("OptionsButtons:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-144, -73), Vector2(37, -73)]
+"values": [Vector2(-140, -73), Vector2(37, -73)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OptionsButtons:theme_override_constants/separation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-23, 9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OptionsButtons/QuitGame:theme_override_styles/normal:expand_margin_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.200818, 0.254283),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 100.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OptionsButtons/Settings:theme_override_styles/normal:expand_margin_right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 0.200818, 0.254283),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 100.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OptionsButtons/StartGame:theme_override_styles/normal:expand_margin_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 0.200818, 0.254283),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 100.0, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OptionsButtons/QuitGame:theme_override_styles/normal:expand_margin_left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1, 0.199514),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [26.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OptionsButtons/Settings:theme_override_styles/normal:expand_margin_left")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.1, 0.199514),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [26.0, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("OptionsButtons/StartGame:theme_override_styles/normal:expand_margin_left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.1, 0.199514),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [26.0, 0.0]
 }
 
 [sub_resource type="Animation" id="Animation_04mby"]
@@ -63,16 +148,202 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(37, -73)]
 }
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_04mby"]
-_data = {
-&"RESET": SubResource("Animation_04mby"),
-&"opcoeschegando": SubResource("Animation_1ccxm")
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OptionsButtons:theme_override_constants/separation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OptionsButtons/StartGame:theme_override_styles/normal:expand_margin_left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [26.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OptionsButtons/Settings:theme_override_styles/normal:expand_margin_left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [26.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OptionsButtons/QuitGame:theme_override_styles/normal:expand_margin_left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [26.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OptionsButtons/StartGame:theme_override_styles/normal:expand_margin_right")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OptionsButtons/Settings:theme_override_styles/normal:expand_margin_right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("OptionsButtons/QuitGame:theme_override_styles/normal:expand_margin_right")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_xl12c"]
+resource_name = "sainda"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OptionsButtons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(37, -73), Vector2(-238, -76)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OptionsButtons:theme_override_constants/separation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [9, -23]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OptionsButtons/QuitGame:theme_override_styles/normal:expand_margin_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 49.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/path = NodePath("OptionsButtons/Settings:theme_override_styles/normal:expand_margin_right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 0.200818, 0.254283),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 100.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/path = NodePath("OptionsButtons/StartGame:theme_override_styles/normal:expand_margin_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 0.200818, 0.254283),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 100.0, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OptionsButtons/QuitGame:theme_override_styles/normal:expand_margin_left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = false
+tracks/6/path = NodePath("OptionsButtons/Settings:theme_override_styles/normal:expand_margin_left")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.1, 0.199514),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [26.0, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = false
+tracks/7/path = NodePath("OptionsButtons/StartGame:theme_override_styles/normal:expand_margin_left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.1, 0.199514),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [26.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xwh6o"]
+_data = {
+&"RESET": SubResource("Animation_04mby"),
+&"entrada": SubResource("Animation_1ccxm"),
+&"sainda": SubResource("Animation_xl12c")
+}
+
+[sub_resource type="Animation" id="Animation_xwh6o"]
 resource_name = "entrou"
-length = 0.1
+length = 0.3
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -111,7 +382,7 @@ tracks/2/keys = {
 "values": [0.0, 55.0]
 }
 
-[sub_resource type="Animation" id="Animation_xwh6o"]
+[sub_resource type="Animation" id="Animation_qq56j"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -150,9 +421,9 @@ tracks/2/keys = {
 "values": [55.0]
 }
 
-[sub_resource type="Animation" id="Animation_qq56j"]
+[sub_resource type="Animation" id="Animation_6ahik"]
 resource_name = "saindo"
-length = 0.1
+length = 0.3
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -161,7 +432,7 @@ tracks/0/path = NodePath("OptionsButtons/QuitGame:theme_override_styles/hover:ex
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [55.0, 0.0]
@@ -173,7 +444,7 @@ tracks/1/path = NodePath("OptionsButtons/Settings:theme_override_styles/hover:ex
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1),
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [55.0, 0.0]
@@ -185,7 +456,7 @@ tracks/2/path = NodePath("OptionsButtons/StartGame:theme_override_styles/hover:e
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1),
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [55.0, 0.0]
@@ -193,12 +464,12 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qq56j"]
 _data = {
-&"RESET": SubResource("Animation_xwh6o"),
-&"entrou": SubResource("Animation_xl12c"),
-&"saindo": SubResource("Animation_qq56j")
+&"RESET": SubResource("Animation_qq56j"),
+&"entrou": SubResource("Animation_xwh6o"),
+&"saindo": SubResource("Animation_6ahik")
 }
 
-[node name="MenuTemplate" type="Control" node_paths=PackedStringArray("entra_sai_mouse", "animador_de_opcoes_menu")]
+[node name="MenuTemplate" type="Control" node_paths=PackedStringArray("entra_sai_mouse", "animador_de_transicao")]
 layout_mode = 3
 anchors_preset = 4
 anchor_top = 0.5
@@ -206,8 +477,8 @@ anchor_bottom = 0.5
 grow_vertical = 2
 size_flags_horizontal = 0
 script = ExtResource("1_jl2ug")
-entra_sai_mouse = NodePath("AnimadorSelecionado")
-animador_de_opcoes_menu = NodePath("AnimadorEntradaOpcoes")
+entra_sai_mouse = NodePath("MousePassou")
+animador_de_transicao = NodePath("SelesaoDeOpcao")
 pode_interagir = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -288,12 +559,12 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
 text = "Quit Game"
 alignment = 0
 
-[node name="AnimadorEntradaOpcoes" type="AnimationPlayer" parent="."]
+[node name="SelesaoDeOpcao" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_04mby")
+&"": SubResource("AnimationLibrary_xwh6o")
 }
 
-[node name="AnimadorSelecionado" type="AnimationPlayer" parent="."]
+[node name="MousePassou" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_qq56j")
 }
@@ -307,3 +578,4 @@ libraries = {
 [connection signal="mouse_entered" from="OptionsButtons/QuitGame" to="." method="_on_quit_game_mouse_entered"]
 [connection signal="mouse_exited" from="OptionsButtons/QuitGame" to="." method="_on_quit_game_mouse_exited"]
 [connection signal="pressed" from="OptionsButtons/QuitGame" to="." method="_on_quit_game_pressed"]
+[connection signal="animation_finished" from="SelesaoDeOpcao" to="." method="_on_selesao_de_opcao_animation_finished"]

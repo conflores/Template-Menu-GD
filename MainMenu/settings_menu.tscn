@@ -1,0 +1,499 @@
+[gd_scene load_steps=14 format=3 uid="uid://cqt703mv0sdwu"]
+
+[ext_resource type="Script" uid="uid://b21osiccddwc8" path="res://MainMenu/settings_menu.gd" id="1_5okd5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ccxm"]
+font_size = 32
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.717647)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04mby"]
+bg_color = Color(0.6, 0.102, 0.102, 1)
+skew = Vector2(-0.5, 0)
+border_width_left = 12
+border_color = Color(0.410658, 0.0562801, 0.0563991, 1)
+border_blend = true
+expand_margin_right = 55.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xl12c"]
+bg_color = Color(0.17878, 0.707651, 0.413564, 1)
+skew = Vector2(-0.5, 0)
+border_width_left = 12
+border_color = Color(0.024, 0.6, 0.072, 1)
+border_blend = true
+expand_margin_right = 55.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ccxm"]
+bg_color = Color(1, 0.57, 0.14, 1)
+skew = Vector2(-0.5, 0)
+border_width_left = 12
+border_color = Color(0.8, 0.453333, 0, 1)
+border_blend = true
+expand_margin_left = 44.0
+expand_margin_right = 74.0
+
+[sub_resource type="Animation" id="Animation_04mby"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OptionsButtons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(37, -73)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OptionsButtons:theme_override_constants/separation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OptionsButtons/Particulas:theme_override_styles/normal:expand_margin_left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [44.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OptionsButtons/Efeitos:theme_override_styles/normal:expand_margin_left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [44.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OptionsButtons/Musica:theme_override_styles/normal:expand_margin_left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [44.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OptionsButtons/Particulas:theme_override_styles/normal:expand_margin_right")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [74.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OptionsButtons/Efeitos:theme_override_styles/normal:expand_margin_right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [74.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("OptionsButtons/Musica:theme_override_styles/normal:expand_margin_right")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [74.0]
+}
+
+[sub_resource type="Animation" id="Animation_1ccxm"]
+resource_name = "opcoeschegando"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OptionsButtons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-144, -73), Vector2(37, -73)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OptionsButtons:theme_override_constants/separation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-23, 9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OptionsButtons/Particulas:theme_override_styles/normal:expand_margin_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.151372, 0.200319),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 74.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OptionsButtons/Efeitos:theme_override_styles/normal:expand_margin_right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.151372, 0.200319),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 74.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OptionsButtons/Musica:theme_override_styles/normal:expand_margin_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.151372, 0.200319),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 74.0, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OptionsButtons/Particulas:theme_override_styles/normal:expand_margin_left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.0997063, 0.151372),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.11504, 44.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OptionsButtons/Efeitos:theme_override_styles/normal:expand_margin_left")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.0997063, 0.151372),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.11504, 44.0, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("OptionsButtons/Musica:theme_override_styles/normal:expand_margin_left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.0997063, 0.151372),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.11504, 44.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_04mby"]
+_data = {
+&"RESET": SubResource("Animation_04mby"),
+&"opcoeschegando": SubResource("Animation_1ccxm")
+}
+
+[sub_resource type="Animation" id="Animation_xwh6o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OptionsButtons/Particulas:theme_override_styles/hover:expand_margin_right")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [55.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OptionsButtons/Efeitos:theme_override_styles/hover:expand_margin_right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [55.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OptionsButtons/Musica:theme_override_styles/hover:expand_margin_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [55.0]
+}
+
+[sub_resource type="Animation" id="Animation_xl12c"]
+resource_name = "entrou"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OptionsButtons/Particulas:theme_override_styles/hover:expand_margin_right")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 55.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OptionsButtons/Efeitos:theme_override_styles/hover:expand_margin_right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 55.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OptionsButtons/Musica:theme_override_styles/hover:expand_margin_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 55.0]
+}
+
+[sub_resource type="Animation" id="Animation_qq56j"]
+resource_name = "saindo"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OptionsButtons/Particulas:theme_override_styles/hover:expand_margin_right")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [55.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OptionsButtons/Efeitos:theme_override_styles/hover:expand_margin_right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [55.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OptionsButtons/Musica:theme_override_styles/hover:expand_margin_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [55.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qq56j"]
+_data = {
+&"RESET": SubResource("Animation_xwh6o"),
+&"entrou": SubResource("Animation_xl12c"),
+&"saindo": SubResource("Animation_qq56j")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nb6at"]
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+grow_vertical = 2
+size_flags_horizontal = 0
+script = ExtResource("1_5okd5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -9.0
+offset_top = -332.0
+offset_right = 1183.0
+offset_bottom = 346.0
+tooltip_text = "
+"
+color = Color(0, 0, 0, 0.627451)
+
+[node name="Title Game" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 34.0
+offset_top = -119.0
+offset_right = 281.0
+offset_bottom = -74.0
+grow_vertical = 2
+alignment = 1
+
+[node name="TemplateNameGame" type="Label" parent="Title Game"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 32
+text = "Template Name"
+label_settings = SubResource("LabelSettings_1ccxm")
+
+[node name="OptionsButtons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 37.0
+offset_top = -73.0
+offset_right = 176.0
+offset_bottom = 46.0
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 9
+
+[node name="Musica" type="Button" parent="OptionsButtons"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
+text = "Uma coisa"
+alignment = 0
+
+[node name="Efeitos" type="Button" parent="OptionsButtons"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
+text = "Outra coisa"
+alignment = 0
+
+[node name="Particulas" type="Button" parent="OptionsButtons"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
+text = "Mais outra coisa"
+alignment = 0
+
+[node name="Volta" type="Button" parent="OptionsButtons"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
+text = "Mais outra coisa"
+alignment = 0
+
+[node name="AnimadorEntradaOpcoes" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_04mby")
+}
+
+[node name="AnimadorSelecionado" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qq56j")
+}
+
+[node name="TransicaoMenu" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nb6at")
+}
+
+[connection signal="mouse_entered" from="OptionsButtons/Musica" to="." method="_on_start_game_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsButtons/Musica" to="." method="_on_start_game_mouse_exited"]
+[connection signal="pressed" from="OptionsButtons/Musica" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="OptionsButtons/Efeitos" to="." method="_on_options_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsButtons/Efeitos" to="." method="_on_options_mouse_exited"]
+[connection signal="pressed" from="OptionsButtons/Efeitos" to="." method="_on_options_pressed"]
+[connection signal="mouse_entered" from="OptionsButtons/Particulas" to="." method="_on_quit_game_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsButtons/Particulas" to="." method="_on_quit_game_mouse_exited"]
+[connection signal="pressed" from="OptionsButtons/Particulas" to="." method="_on_quit_game_pressed"]
+[connection signal="mouse_entered" from="OptionsButtons/Volta" to="." method="_on_quit_game_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsButtons/Volta" to="." method="_on_quit_game_mouse_exited"]
+[connection signal="pressed" from="OptionsButtons/Volta" to="." method="_on_quit_game_pressed"]
+[connection signal="pressed" from="OptionsButtons/Volta" to="." method="_on_volta_pressed"]
+[connection signal="animation_finished" from="TransicaoMenu" to="." method="_on_transicao_menu_animation_finished"]
