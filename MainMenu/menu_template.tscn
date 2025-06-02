@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bcnqdsellj43u"]
+[gd_scene load_steps=15 format=3 uid="uid://bcnqdsellj43u"]
 
 [ext_resource type="Script" uid="uid://b2xyhws4i6fba" path="res://MainMenu/menu_template.gd" id="1_jl2ug"]
 
@@ -8,6 +8,13 @@ outline_color = Color(0, 0, 0, 1)
 shadow_size = 2
 shadow_color = Color(0, 0, 0, 0.717647)
 shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwh6o"]
+bg_color = Color(1, 0.568627, 0.141176, 1)
+skew = Vector2(-0.5, 0)
+border_width_left = 12
+border_color = Color(0.8, 0.454902, 0, 1)
+border_blend = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04mby"]
 bg_color = Color(0.6, 0.102, 0.102, 1)
@@ -26,10 +33,10 @@ border_blend = true
 expand_margin_right = 55.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ccxm"]
-bg_color = Color(1, 0.57, 0.14, 1)
+bg_color = Color(1, 0.568627, 0.141176, 1)
 skew = Vector2(-0.5, 0)
 border_width_left = 12
-border_color = Color(0.8, 0.453333, 0, 1)
+border_color = Color(0.8, 0.454902, 0, 1)
 border_blend = true
 expand_margin_left = 26.0
 
@@ -133,6 +140,42 @@ tracks/7/keys = {
 "update": 0,
 "values": [26.0, 0.0]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("OptionsButtons/QuitGame:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("OptionsButtons/Settings:disabled")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("OptionsButtons/StartGame:disabled")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_04mby"]
 length = 0.001
@@ -231,6 +274,42 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("OptionsButtons/QuitGame:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("OptionsButtons/Settings:disabled")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("OptionsButtons/StartGame:disabled")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_xl12c"]
@@ -332,6 +411,42 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [26.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("OptionsButtons/QuitGame:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("OptionsButtons/Settings:disabled")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("OptionsButtons/StartGame:disabled")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xwh6o"]
@@ -469,7 +584,7 @@ _data = {
 &"saindo": SubResource("Animation_6ahik")
 }
 
-[node name="MenuTemplate" type="Control" node_paths=PackedStringArray("entra_sai_mouse", "animador_de_transicao")]
+[node name="MenuTemplate" type="Control" node_paths=PackedStringArray("entra_sai_mouse", "animador_de_transicao", "bt1", "bt2", "bt3", "timer")]
 layout_mode = 3
 anchors_preset = 4
 anchor_top = 0.5
@@ -480,6 +595,10 @@ script = ExtResource("1_jl2ug")
 entra_sai_mouse = NodePath("MousePassou")
 animador_de_transicao = NodePath("SelesaoDeOpcao")
 pode_interagir = true
+bt1 = NodePath("OptionsButtons/StartGame")
+bt2 = NodePath("OptionsButtons/Settings")
+bt3 = NodePath("OptionsButtons/QuitGame")
+timer = NodePath("Timer")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -529,8 +648,12 @@ theme_override_constants/separation = 9
 
 [node name="StartGame" type="Button" parent="OptionsButtons"]
 layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 16
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xwh6o")
 theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
@@ -539,9 +662,13 @@ alignment = 0
 
 [node name="Settings" type="Button" parent="OptionsButtons"]
 layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xwh6o")
 theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
@@ -550,9 +677,13 @@ alignment = 0
 
 [node name="QuitGame" type="Button" parent="OptionsButtons"]
 layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xwh6o")
 theme_override_styles/hover = SubResource("StyleBoxFlat_04mby")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xl12c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1ccxm")
@@ -569,6 +700,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_qq56j")
 }
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.09
+one_shot = true
+
 [connection signal="mouse_entered" from="OptionsButtons/StartGame" to="." method="_on_start_game_mouse_entered"]
 [connection signal="mouse_exited" from="OptionsButtons/StartGame" to="." method="_on_start_game_mouse_exited"]
 [connection signal="pressed" from="OptionsButtons/StartGame" to="." method="_on_button_pressed"]
@@ -579,3 +714,4 @@ libraries = {
 [connection signal="mouse_exited" from="OptionsButtons/QuitGame" to="." method="_on_quit_game_mouse_exited"]
 [connection signal="pressed" from="OptionsButtons/QuitGame" to="." method="_on_quit_game_pressed"]
 [connection signal="animation_finished" from="SelesaoDeOpcao" to="." method="_on_selesao_de_opcao_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
